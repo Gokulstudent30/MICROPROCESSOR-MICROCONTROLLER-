@@ -1,0 +1,11 @@
+ORG 0000H
+MOV P0,#0X03
+MAIN:JB P0.0,NEXT
+CLR P0.2
+SJMP MAIN
+NEXT:JB P0.1,LED_ON
+CLR P0.2
+SJMP MAIN
+LED_ON:SETB P0.2
+SJMP MAIN
+END                                                                                                          
